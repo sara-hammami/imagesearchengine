@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-size: 36px;
+    color: #3498db;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form_box  {
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    
+}
+
+.form_box input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.form_box  button[type="submit"] {
+    background-color: #3498db;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"] i {
+    margin-right: 5px;
+}
+
+ .container {
+            
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+    margin: 0;
+    background-color: aliceblue;
+                        
+        }
+.container>h2{
+ text-align: center;
+ font-size: 10px;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+
+     
+.image-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr); 
+ gap: 10px; 
+}
+
+ .image-item {
+        width: 100%; 
+        height: auto; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+  }

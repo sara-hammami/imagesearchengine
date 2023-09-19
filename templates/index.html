@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1>Image Search Engine</h1>
+    <div class="form_box">
+        <form  action="/search" method="POST">
+            <input type="text" name="search_query" placeholder="looking for ...">
+            <button type="submit"> <i class="fas fa-search"></i>Search</button>
+        </form>
+    </div>
+    
+</body>
+</html>

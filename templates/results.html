@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        
+    </style> 
+</head>
+<body>
+    <h1>Image Search Engine</h1>
+
+        <div class="form_box">
+            <form  action="/search" method="POST">
+                <input type="text" name="search_query" placeholder="looking for ...">
+                <button type="submit"> <i class="fas fa-search"></i>Search</button>
+            </form>
+        </div>
+    <center>
+        <h2>Number of results found: ({{ res['hits']['total']['value'] }}) </h2>
+    </center>
+   
+    <div class="container">
+
+    <div class="image-grid">
+        {% for hit in res['hits']['hits'] %}
+            <div class="image-item">
+                <img src="{{ 'http://farm' + hit["_source"]["flickr_farm"] + ".staticflickr.com/" +
+                hit["_source"]["flickr_server"] + "/" + hit["_source"]["id"] + "_" + hit["_source"]["flickr_secret"] +
+                ".jpg" }}" alt="Image">
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+    
+</body>
+</html>
